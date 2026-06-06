@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceClean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>SpaceClean</h1>
+      <button id="scanBtn">🔍 Analyser un dossier</button>
+      <div id="pathDisplay"></div>
+    </header>
+
+    <main>
+      <div id="sidebar">
+        <h3>Détails</h3>
+        <div id="details">
+          <p>Sélectionnez un bloc pour voir les détails.</p>
+        </div>
+        <hr>
+        <h3>Dossiers rapides</h3>
+        <ul id="quickPaths">
+          <li data-path="C:\Program Files">Program Files</li>
+          <li data-path="C:\Program Files (x86)">Program Files (x86)</li>
+          <li data-path="C:\Users">Users</li>
+        </ul>
+      </div>
+      <div id="canvasContainer">
+        <canvas id="treemap"></canvas>
+        <div id="loading" class="hidden">
+          <div class="spinner"></div>
+          <p>Analyse en cours...</p>
+        </div>
+        <div id="emptyState">
+          <p>Cliquez sur "Analyser un dossier" pour commencer</p>
+        </div>
+      </div>
+    </main>
+
+    <div id="tooltip" class="hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
